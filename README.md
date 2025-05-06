@@ -2,7 +2,7 @@
 
 This is a simple setup using Mocha for testing in JS.
 
-[Live demo](https://shrimple-js-tests.404notboring.com/)
+[Live Demo](https://shrimple-js-tests.404notboring.com/)
 
 ## Installation
 
