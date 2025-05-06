@@ -1,0 +1,14 @@
+FROM node:20-slim
+
+# Install Python for http.server
+RUN apt-get update && apt-get install -y watchman python3 curl
+
+WORKDIR /app
+
+# Install browser-sync globally
+RUN npm install -g browser-sync
+
+# Expose the port
+EXPOSE 3000
+
+CMD ["/app/docker/docker-entrypoint-dev.sh"]

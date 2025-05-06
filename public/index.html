@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shrimple JS Testing Setup</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <link rel="icon" href="https://fav.farm/🦐" />
+    <link rel="stylesheet" href="/output.css" />
+
+    <!-- add a nice code editor, just a fancy <textarea> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.41.0/ace.min.js"
+      integrity="sha512-flsyiGnpzyMMHGTb5iRwPNK2nObeYrmOryKKZmDYXeXpQeyaYnQdR97huozvxnnFrEADLqIHGFKoehUNDk/ZNg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- add mocha css, to show results -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css"
+    />
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+      mocha.setup("bdd"); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+      let assert = chai.assert; // chai has a lot of stuff, let's make assert global
+    </script>
+  </head>
+  <body class="text-gray-200 bg-gray-800 flex flex-col pt-12">
+    <section class="prose prose-invert self-center">
+      <h1>A 🦐Shrimple🦐 JS Testing Setup</h1>
+      <p>
+        Testing in JS isn't that complicated. You can use something like
+        <a href="https://mochajs.org/">Mocha</a> to test your JS functions. I
+        use <a href="https://www.chaijs.com/">Chai</a> to have a fancier
+        <code>assert</code>.
+      </p>
+      <hr />
+      <p>
+        Can you fix <code>script.js</code> to make it pass all the tests in
+        <code>tests.js</code>?
+      </p>
+      <br />
+    </section>
+    <section class="flex md:flex-row flex-col w-full justify-center h-[600px]">
+      <div class="size-full flex flex-col bg-gray-900 p-1">
+        <p
+          class="self-start font-mono bg-gray-800 border border-gray-700 border-b-0 px-4 pt-1 rounded-t"
+        >
+          script.js <span class="text-gray-400">×</span>
+        </p>
+        <div id="pow" class="size-full" style="font-size: 1rem"></div>
+      </div>
+      <div class="size-full flex flex-col bg-gray-900 p-1">
+        <p
+          class="self-start font-mono bg-gray-800 border border-gray-700 border-b-0 px-4 pt-1 rounded-t"
+        >
+          tests.js <span class="text-gray-400">×</span>
+        </p>
+        <div id="tests" class="size-full" style="font-size: 1rem"></div>
+      </div>
+    </section>
+    <section
+      class="bg-gray-900 p-8 z-10 flex flex-col items-center relative [&_#mocha-stats]:bg-white h-[600px]"
+    >
+      <button
+        id="run"
+        class="bg-green-500 text-black py-2 px-4 rounded hover:brightness-105 absolute top-0 -translate-y-1/2"
+      >
+        <img src="play.svg" class="inline w-5" />
+        Test <span class="font-mono">window.pow()</span>
+      </button>
+      <div id="mocha" style="margin: 0" class="w-full max-w-md"></div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

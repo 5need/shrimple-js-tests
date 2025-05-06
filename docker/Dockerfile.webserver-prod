@@ -1,0 +1,13 @@
+FROM node:20-slim
+
+# Install Python for http.server
+RUN apt-get update && apt-get install -y watchman python3
+
+WORKDIR /app
+
+COPY . .
+
+# Expose the port
+EXPOSE 3000
+
+CMD ["python3", "-m","http.server", "3000", "--directory", "./public"]
