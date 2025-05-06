@@ -2,6 +2,8 @@
 
 This is a simple setup using Mocha for testing in JS.
 
+[Live demo](https://shrimple-js-tests.404notboring.com/)
+
 ## Installation
 
 Make sure you have `docker` installed (version 20.10.13 or higher).
