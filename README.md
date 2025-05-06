@@ -1,7 +1,6 @@
-# A 🦐Shrimple🦐 Task Tracker
+# A 🦐Shrimple🦐 JS Testing Setup
 
-What it says on the tin.
-Just JS + HTML + CSS (Tailwindcss).
+This is a simple setup using Mocha for testing in JS.
 
 ## Installation
 
